@@ -1,4 +1,4 @@
-# take_inventory.py
+# inventory_sequence.py
 # Andrew Lounsbury
 # 20/3/23
 # Purpose: generate the inventory sequence; https://www.youtube.com/watch?v=rBU9E-ZOZAI
