@@ -5,6 +5,7 @@
 sequence = [0]
 highestNum = 0
 
+# counts the number of occurrences of num in sequence
 def count_num(num, sequence):
     total = 0
     for s in sequence:
@@ -12,6 +13,7 @@ def count_num(num, sequence):
             total += 1
     return total
 
+# computes up to the n-th number in the sequence
 def take_inventory(sequence, n):
     num = 0
     # while the sequence has less than n numbers
