@@ -18,7 +18,6 @@ def take_inventory(sequence, n):
     while len(sequence) < n:
         print("len:", len(sequence))
         if sequence[len(sequence) - 1] == 0:
-            print("last:", sequence[len(sequence) - 1])
             i = 0
             while i < 100 and len(sequence) < n:
                 val = count_num(i, sequence)
