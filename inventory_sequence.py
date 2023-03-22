@@ -2,6 +2,10 @@
 # Andrew Lounsbury
 # 20/3/23
 # Purpose: generate the inventory sequence; https://www.youtube.com/watch?v=rBU9E-ZOZAI
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
 sequence = [0]
 highestNum = 0
 
@@ -14,19 +18,18 @@ def count_num(num, sequence):
     return total
 
 # computes up to the n-th number in the sequence
-def take_inventory(sequence, n):
+def generate(sequence, n):
     num = 0
     # while the sequence has less than n numbers
     while len(sequence) < n:
-        print("len:", len(sequence))
         if sequence[len(sequence) - 1] == 0:
             i = 0
-            while i < 100 and len(sequence) < n:
+            while i < 1000 and len(sequence) < n:
                 val = count_num(i, sequence)
                 sequence.append(val)
                 i += 1
                 if val == 0:
                     i = 0
 
-take_inventory(sequence, 100)
+generate(sequence, 100)
 print(sequence)
