@@ -3,8 +3,6 @@
 # 20/3/23
 # Purpose: generate the inventory sequence; https://www.youtube.com/watch?v=rBU9E-ZOZAI
 
-import seaborn as sns
-import matplotlib.pyplot as plt
 import pandas as pd
 sequence = [0]
 highestNum = 0
