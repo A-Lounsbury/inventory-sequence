@@ -3,9 +3,9 @@
 # 20/3/23
 # Purpose: generate the inventory sequence; https://www.youtube.com/watch?v=rBU9E-ZOZAI
 
+import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
-sequence = [0]
-highestNum = 0
 
 # counts the number of occurrences of num in sequence
 def count_num(num, sequence):
@@ -16,7 +16,8 @@ def count_num(num, sequence):
     return total
 
 # computes up to the n-th number in the sequence
-def generate(sequence, n):
+def generate_inventory(n):
+    sequence = [0]
     num = 0
     # while the sequence has less than n numbers
     while len(sequence) < n:
@@ -28,6 +29,40 @@ def generate(sequence, n):
                 i += 1
                 if val == 0:
                     i = 0
+    return sequence
 
-generate(sequence, 100)
-print(sequence)
+n1 = 1000
+sequence = generate_inventory(n1)
+df1 = pd.DataFrame(sequence, columns=["Numbers"])
+
+indices = []
+for i in range(n1):
+    indices.append(i)
+
+df1["index"] = indices
+sns.scatterplot(x="index", y = "Numbers", data=df1)
+plt.show()
+
+n2 = 10000
+sequence = generate_inventory(n2)
+df2 = pd.DataFrame(sequence, columns=["Numbers"])
+
+indices = []
+for i in range(n2):
+    indices.append(i)
+
+df2["index"] = indices
+sns.scatterplot(x="index", y = "Numbers", data=df2)
+plt.show()
+
+n3 = 100000
+sequence = generate_inventory(n3)
+df3 = pd.DataFrame(sequence, columns=["Numbers"])
+
+indices = []
+for i in range(n3):
+    indices.append(i)
+
+df3["index"] = indices
+sns.scatterplot(x="index", y = "Numbers", data=df3)
+plt.show()
