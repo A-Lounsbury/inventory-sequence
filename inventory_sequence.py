@@ -31,43 +31,28 @@ def generate_inventory(n):
                     i = 0
     return sequence
 
-n1 = 1000
-sequence = generate_inventory(n1)
-df1 = pd.DataFrame(sequence, columns=["Numbers"])
-
-indices = []
-for i in range(n1):
-    indices.append(i)
-
-df1["index"] = indices
-sns.scatterplot(x="index", y = "Numbers", data=df1)
+n = 1000
+sequence = generate_inventory(n)
+df = pd.DataFrame(sequence, columns=["Numbers"])
+df["index"] = [i for i in range(n)]
+sns.scatterplot(x="index", y = "Numbers", data=df)
 plt.show()
 
-n2 = 10000
-sequence = generate_inventory(n2)
-df2 = pd.DataFrame(sequence, columns=["Numbers"])
-
-indices = []
-for i in range(n2):
-    indices.append(i)
-
-df2["index"] = indices
-sns.scatterplot(x="index", y = "Numbers", data=df2)
+n = 10000
+sequence = generate_inventory(n)
+df = pd.DataFrame(sequence, columns=["Numbers"])
+df["index"] = [i for i in range(n)]
+sns.scatterplot(x="index", y = "Numbers", data=df)
 plt.show()
 
 n3 = 100000
 sequence = generate_inventory(n3)
 df3 = pd.DataFrame(sequence, columns=["Numbers"])
-
-indices = []
-for i in range(n3):
-    indices.append(i)
-
-df3["index"] = indices
-sns.scatterplot(x="index", y = "Numbers", data=df3)
+df["index"] = [i for i in range(n)]
+sns.scatterplot(x="index", y = "Numbers", data=df)
 plt.show()
 
-# Averages
+# Plots of Averages
 n = 10
 sequence = generate_inventory(n)
 average_sequence = []
@@ -78,11 +63,7 @@ for i, s in enumerate(sequence):
     average_sequence.append(average)
 
 df_averages = pd.DataFrame(average_sequence, columns=["Average"])
-
-indices = []
-for i in range(n):
-    indices.append(i)
-df_averages['index'] = indices
+df_averages['index'] = [i for i in range(n)]
 sns.scatterplot(x="index", y="Average", data=df_averages)
 plt.show()
 
@@ -96,11 +77,7 @@ for i, s in enumerate(sequence):
     average_sequence.append(average)
 
 df_averages = pd.DataFrame(average_sequence, columns=["Average"])
-
-indices = []
-for i in range(n):
-    indices.append(i)
-df_averages['index'] = indices
+df_averages['index'] = [i for i in range(n)]
 sns.scatterplot(x="index", y="Average", data=df_averages)
 plt.show()
 
@@ -114,11 +91,7 @@ for i, s in enumerate(sequence):
     average_sequence.append(average)
 
 df_averages = pd.DataFrame(average_sequence, columns=["Average"])
-
-indices = []
-for i in range(n):
-    indices.append(i)
-df_averages['index'] = indices
+df_averages['index'] = [i for i in range(n)]
 sns.scatterplot(x="index", y="Average", data=df_averages)
 plt.show()
 
@@ -132,11 +105,7 @@ for i, s in enumerate(sequence):
     average_sequence.append(average)
 
 df_averages = pd.DataFrame(average_sequence, columns=["Average"])
-
-indices = []
-for i in range(n):
-    indices.append(i)
-df_averages['index'] = indices
+df_averages['index'] = [i for i in range(n)]
 sns.scatterplot(x="index", y="Average", data=df_averages)
 plt.show()
 
@@ -150,10 +119,6 @@ for i, s in enumerate(sequence):
     average_sequence.append(average)
 
 df_averages = pd.DataFrame(average_sequence, columns=["Average"])
-
-indices = []
-for i in range(n):
-    indices.append(i)
-df_averages['index'] = indices
+df_averages['index'] = [i for i in range(n)]
 sns.scatterplot(x="index", y="Average", data=df_averages)
 plt.show()
